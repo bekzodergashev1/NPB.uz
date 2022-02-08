@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="ru-RU">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
     <title>Npb.uz</title>
     <meta name="description" content="Npb.uz">
     <meta name="keywords"
@@ -21,45 +24,50 @@
 </head>
 
 <style>
-.section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
 
-.section h1 {
-  text-align: center;
-  font-size: 6rem;
-  font-family: "Cookie";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  opacity: 0.7;
+html {
+  scroll-behavior: smooth;
 }
+    .section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+    .section h1 {
+        text-align: center;
+        font-size: 6rem;
+        font-family: "Cookie";
+        padding: 20px;
+        margin: 15px;
+        z-index: 1;
+        opacity: 0.7;
+    }
 
-.color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-}
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.5;
+    }
 </style>
 
 <body class="page-loaded">
-    <div class="preloader spinner-grow text-warning"><img src="http://localhost:8000/static/images/preloader.png" alt="Image" role="status">
+    <div class="preloader spinner-grow text-warning"><img src="http://localhost:8000/static/images/preloader.png"
+            alt="Image" role="status">
         <span class="sr-only">Loading...</span>
     </div>
     <!-- end preloader -->
@@ -138,9 +146,31 @@
                     </ul>
                 </div>
                 <!-- end site-menu -->
-                <div class="hamburger-menu"><span></span> <span></span> <span></span></div>
-                <!-- end hamburger-menu -->
-                <div class="navbar-button"><a href="#">Подробнее</a></div>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- <div class="modal-body">
+                              ...
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div> -->
+                            <!-- Scrollable modal -->
+                            <div class="modal-dialog modal-dialog-scrollable z-index-4">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- end navbar-button -->
             </div>
             <!-- end inner -->
@@ -151,100 +181,93 @@
 
 
     <header class="slider">
-    <div class="main-slider swiper-container-horizontal">
-        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1519px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 1519px;">
-            <div class="section">
-                <div class="video-container">
-                    <div class="color-overlay"></div>
-                    <video autoplay loop muted>
-                        <source src="{% static 'video/npb.mp4' %}">
-                    </video>
+        <div class="main-slider swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1519px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next"
+                    data-swiper-slide-index="1" style="width: 1519px;">
+                    <div class="slide-image">
+                        <video autoplay muted loop width="100%">
+                                <source src="{% static 'video/npb.mp4' %}" type="video/mp4">
+                          </video>
+                    </div>
+                    <!-- end slide-image -->
+                    <div class="container">
+                        <h1>NPB PLAST</h1>
+                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью 
+                            к ультрафиолетовому излучению повышенной стойкостью к нагреванию и высокой прочностью</p>
+                        <a href="#">Посмотреть</a>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1519px;">
+                    <div class="slide-image">
+                        <video autoplay muted loop width="100%">
+                            <source src="{% static 'video/npb.mp4' %}" type="video/mp4">
+                          </video>
+                    </div>
+                    <!-- end slide-image -->
+                    <div class="container">
+                        <h1>NPB PLAST</h1>
+                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому 
+                            излучению повышенной стойкостью к нагреванию и высокой прочностью</p>
+                        <a href="https://ecolos.uz/about.html">Подробнее</a>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end swiper-slide -->
+                <div class="swiper-slide swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1"
+                    style="width: 1519px;">
+                    <div class="slide-image">
+                        <video autoplay muted loop width="100%">
+                            <source src="{% static 'video/npb.mp4' %}" type="video/mp4">
+                          </video>
+                    </div>
+                    <!-- end slide-image -->
+                    <div class="container">
+                        <h1>NPB PLAST</h1>
+                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью
+                             к ультрафиолетовому излучению повышенной стойкостью к нагреванию и высокой прочностью</p>
+                        <a href="https://ecolos.uz/category.html">Посмотреть</a>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end swiper-slide -->
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                    data-swiper-slide-index="0" style="width: 1519px;">
+                    <div class="slide-image">
+                        <video autoplay muted loop width="100%">
+                            <source src="{% static 'video/npb.mp4' %}" type="video/mp4">
+                          </video>
+                    </div>
+                    <!-- end slide-image -->
+                    <div class="container">
+                        <h1>NPB PLAST</h1>
+                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому 
+                            излучению повышенной стойкостью к нагреванию и высокой прочностью</p>
+                        <a href="https://ecolos.uz/about.html">Подробнее</a>
+                    </div>
+                    <!-- end container -->
                 </div>
             </div>
-                        <!-- end slide-image -->
-                         <div class="container">
-                        <h1>NPB PLAST</h1>
-                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому
-                            излучению повышенной стойкостью к нагреванию и высокой прочностью.</p>
-                        <a href="#">Посмотреть</a>
-                    </div>
-                        <!-- end container -->
-                    </div>
-                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1519px;">
-                    <div class="section">
-                        <div class="video-container">
-                            <div class="color-overlay"></div>
-                            <video autoplay loop muted>
-                                <source src="{% static 'video/npb.mp4' %}">
-                            </video>
-                        </div>
-                    </div>                        <!-- end slide-image -->
-                         <div class="container">
-                        <h1>NPB PLAST</h1>
-                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому
-                            излучению повышенной стойкостью к нагреванию и высокой прочностью.</p>
-                        <a href="#">Посмотреть</a>
-                    </div>
-                        <!-- end container -->
-                    </div>
-                    <!-- end swiper-slide -->
-            <div class="swiper-slide swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 1519px;">
-                    <div class="section">
-                        <div class="video-container">
-                            <div class="color-overlay"></div>
-                            <video autoplay loop muted>
-                                <source src="{% static 'video/npb.mp4' %}">
-                            </video>
-                        </div>
-                    </div>                        <!-- end slide-image -->
-                         <div class="container">
-                        <h1>NPB PLAST</h1>
-                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому
-                            излучению повышенной стойкостью к нагреванию и высокой прочностью.</p>
-                        <a href="#">Посмотреть</a>
-                    </div>
-                        <!-- end container -->
-                    </div>
-                    <!-- end swiper-slide -->
-                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1519px;">
-                            <div class="section">
-                                <div class="video-container">
-                                    <div class="color-overlay"></div>
-                                    <video autoplay loop muted>
-                                        <source src="{% static 'video/npb.mp4' %}">
-                                    </video>
-                                </div>
-                            </div>                        <!-- end slide-image -->
-                         <div class="container">
-                        <h1>NPB PLAST</h1>
-                        <p>Трубы для водоснабжения высокого качества отличающиеся устойчивостью к ультрафиолетовому
-                            излучению повышенной стойкостью к нагреванию и высокой прочностью.</p>
-                        <a href="#">Посмотреть</a>
-                    </div>
-
-                        <!-- end container -->
-                    </div>
-        </div>
-        <!-- end swiper-wrapper -->
-        <div class="controls">
-         <div class="controls">
+            <!-- end swiper-wrapper -->
+            <div class="controls">
                 <div class="button-prev">
-                    &lt;
+                    <
                 </div>
                 <!-- end button-prev -->
-                <div class="swiper-pagination swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">2</span></div>
+                <div class="swiper-pagination swiper-pagination-fraction"><span
+                        class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">2</span>
+                </div>
                 <!-- end swiper-pagination -->
                 <div class="button-next">
-                    &gt;
+                    >
                 </div>
                 <!-- end button-next -->
             </div>
-        <!-- end controls -->
-    </div>
-    </div>
-    <!-- end main-slider -->
-</header>
-
+            <!-- end controls -->
+        </div>
+        <!-- end main-slider -->
+    </header>
 
 
 
@@ -255,19 +278,22 @@
                     <div class="section-title wow flipInX" style="visibility: hidden; animation-name: none;">
                         <h2>«New Public Build»</h2>
 
-                    <!-- end section-title -->
+                        <!-- end section-title -->
 
-                <!-- end col-12 -->
-                <div class="col-12 wow fadeIn text-center" style="visibility: hidden; animation-name: none;">
-                     <p  style="font-family:verdana; color: #999">New Public Build Строительства канализационных линий и линий водоснабжения, строительство резервуаров и насосных станций.</p>
+                        <!-- end col-12 -->
+                        <div class="col-12 wow fadeIn text-center" style="visibility: hidden; animation-name: none;">
+                            <p style="font-family:verdana; color: #999">New Public Build Строительства канализационных
+                                линий и линий водоснабжения, строительство резервуаров и насосных станций.</p>
 
-                    <p  style="font-family:verdana; color: #999">Ремонт и реконструкция линий водоснабжения и канализации. Ремонт и реконструкция резервуаров и насосных станций.</p>
-                    <div class="row">
-                    <h3 class="col-12">NPB PLAST</h3>
+                            <p style="font-family:verdana; color: #999">Ремонт и реконструкция линий водоснабжения и
+                                канализации. Ремонт и реконструкция резервуаров и насосных станций.</p>
+                            <div class="row">
+                                <h3 class="col-12">NPB PLAST</h3>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
-                    </div></div>
                 <!-- end col-6 -->
                 <div class="col-md-6">
                     <div class="counter-box wow slideInLeft" style="visibility: hidden; animation-name: none;">
@@ -277,7 +303,8 @@
                                     <td width="70"><img src="/static/images/icons/1.0.png" alt="" width="70"></td>
                                     <td>
                                         <h4>Проверен временем</h4>
-                                        <p style="margin-left: 10px;">стойкость к резким перепадам температур (от минус 45 до плюс 40 градусов.</p>
+                                        <p style="margin-left: 10px;">стойкость к резким перепадам температур (от минус
+                                            45 до плюс 40 градусов.</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -292,7 +319,8 @@
                                     <td width="70"><img src="/static/images/icons/3.0.png" alt="" width="70"></td>
                                     <td>
                                         <h4>Собственная научная группа</h4>
-                                        <p style="margin-left: 10px;">способность выдержать внутреннее давление (до 16 атмосфер), что говорит о высокой прочности материала.</p>
+                                        <p style="margin-left: 10px;">способность выдержать внутреннее давление (до 16
+                                            атмосфер), что говорит о высокой прочности материала.</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -307,7 +335,8 @@
                                     <td width="70"><img src="/static/images/icons/4.0.png" alt="" width="70"></td>
                                     <td>
                                         <h4>5 производственных комплексов</h4>
-                                        <p style="margin-left: 10px;">во время эксплуатации не образуется налет и прочие химические образования.</p>
+                                        <p style="margin-left: 10px;">во время эксплуатации не образуется налет и прочие
+                                            химические образования.</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -322,7 +351,8 @@
                                     <td width="70"><img src="/static/images/icons/5.0.png" alt="" width="70"></td>
                                     <td>
                                         <h4>Реализовано</h4>
-                                        <p style="margin-left: 10px;">низкий вес, гибкость, жесткость позволяют сократить расходы при транспортировке, монтаже.</p>
+                                        <p style="margin-left: 10px;">низкий вес, гибкость, жесткость позволяют
+                                            сократить расходы при транспортировке, монтаже.</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -368,17 +398,17 @@
 
     <section class="content-section" id="3">
         <div class="row">
-                <div class="col-12">
-                    <div class="section-title wow flipInX" style="visibility: hidden; animation-name: none;">
-                        <h2>Наши партнеры</h2>
-                        <h6>Нашими партнерами являются известные международные и местные компании</h6>
-                    </div>
-                    <!-- end section-title -->
+            <div class="col-12">
+                <div class="section-title wow flipInX" style="visibility: hidden; animation-name: none;">
+                    <h2>Наши партнеры</h2>
+                    <h6>Нашими партнерами являются известные международные и местные компании</h6>
                 </div>
+                <!-- end section-title -->
+            </div>
 
             <img src="{% static '/images/Frame.png' %}" alt="">
         </div>
-        </section>
+    </section>
     <!-- end content-section -->
 
     <section class="content-section no-spacing wow fadeIn" id="4" style="visibility: hidden; animation-name: none;">
@@ -386,17 +416,17 @@
     </section>
     <!-- end content-section -->
 
- <section class="content-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h2>Продукция серийного производства</h2>
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>Продукция серийного производства</h2>
+                    </div>
+                    <!-- end section-title -->
                 </div>
-                <!-- end section-title -->
-            </div>
-            <!-- end col-12 -->
-                            <div class="col-lg-4">
+                <!-- end col-12 -->
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="Системы и установки водоподготовки">
@@ -409,7 +439,7 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="КНС, Насосные станции">
@@ -422,7 +452,7 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="Очистные сооружения поверхностных стоков">
@@ -435,7 +465,7 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="Биологическая очистка сточных вод">
@@ -448,7 +478,7 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="Емкостное оборудование">
@@ -461,7 +491,7 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="solution-box">
                         <figure>
                             <img src="{% static '/images/logo.png' %}" alt="Оборудование для очистных сооружений">
@@ -474,11 +504,11 @@
                     <!-- end solution-box -->
                 </div>
                 <!-- end col-4 -->
-                    </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
 
     <section class="content-section no-top-spacing wow fadeIn" id="6" style="visibility: hidden; animation-name: none;">
         <div class="container">
@@ -488,25 +518,25 @@
                         <video autoplay loop muted>
                             <source src="{% static 'video/npb.mp4' %}">
                         </video>
-                        <a href="/videos/video.mp4" data-fancybox="">Посмотреть
-                            видео</a>
+
                     </figure>
                     <!-- end video-thumb -->
                 </div>
                 <!-- end col-5 -->
                 <div class="col-lg-7">
                     <div class="track-shipping-form">
-                        <form id="ajax-form1">
+                        <form id="ajax-form1" method="POST">
+                            {% csrf_token %}
                             <div class="inner">
                                 <h3 class="mt-3">Заявка на оборудование для очистики и перекачки стоков</h3>
                                 <div class="form-group">
-                                    <input id="nameRequest" type="text" name="name" class="pl-3"
-                                        placeholder="Как к вам можно обращаться" required="">
+                                    <input id="nameRequest" type="text" name="fullname" class="pl-3"
+                                        placeholder="Как к вам можно обращаться" required>
                                 </div>
                                 <!-- end form-group -->
                                 <div class="form-group">
                                     <input id="phone" type="tel" name="phone" class="pl-3 input-phone"
-                                        placeholder="Номер телефона" required="">
+                                        placeholder="Номер телефона" required>
                                 </div>
                                 <!-- end form-group -->
                                 <div class="form-group">
@@ -529,31 +559,33 @@
     <footer class="footer pb-5">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-4 col-md-6">
-                    <figure class="logo"><img src="/static/images/logo.png" srcset="/static/images/logo.png"  alt="Image"></figure>
-                    <p>+998 (71) 200-73-33<br>
-                        <a href="mailto:info@nbp.uz">info@nbp.uz</a>
-                    </p>
+                    <figure class="logo"><img src="/static/images/logo.png" srcset="/static/images/logo.png"
+                            alt="Image"></figure>
                 </div>
                 <!-- end col-4 -->
 
                 <!-- end col-4 -->
-                <div class="col-lg-2">
-                    
-                </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
+                    <br><br>
+                    <h3>Tel:</h3>
+                    <a href="tel:+998 (71) 200-73-33" style="font-size: 15px">+998 (71) 200-73-33</a>
+
+                    <h3>Email:</h3>
+                    <a href="mailto:info@nbp.uz" style="font-size: 15px">info@nbp.uz</a>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                  <ul class="footer-menu">
-                      <li><a href="#1">Главный</a></li>
-                      <li><a href="#2">О компании</a></li>
-                      <li><a href="#3">Услуги</a></li>
-                    <li><a href="#4">Продукция</a></li>
-                    <li><a href="#5">Объекты</a></li>
-                    <li><a href="#6">Контакты</a></li>
-                  </ul>
-              </div>
+                <div class="col-lg-5 col-md-6">
+                    <ul class="footer-menu" style="font-size: 15px">
+                        <li><a href="#1">Главный</a></li>
+                        <li><a href="#2">О компании</a></li>
+                        <li><a href="#3">Услуги</a></li>
+                        <li><a href="#4">Продукция</a></li>
+                        <li><a href="#5">Объекты</a></li>
+                        <li><a href="#6">Контакты</a></li>
+                    </ul>
+                </div>
                 <!-- end col-4 -->
             </div>
             <!-- end row -->
@@ -582,13 +614,16 @@
         data-key="x2FG-D9s"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BN7FCY2NJ8"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-BN7FCY2NJ8');
-    </script>
+    </script> -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/fancybox.min.js' %}"></script>

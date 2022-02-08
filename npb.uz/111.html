@@ -1,60 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <style>
-.section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.primary-btn {
+    color: #242429;
+    padding: 0 42px;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 0px;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid #2c9d45;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
-.section h1 {
-  text-align: center;
-  font-size: 6rem;
-  font-family: "Cookie";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  opacity: 0.7;
+element.style {
 }
-
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.primary-btn {
+    color: #242429;
+    padding: 0 42px;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 0px;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid #2c9d45;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
-
-.color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
 }
 </style>
-
 <body>
-<div class="section">
-    <div class="video-container">
-        <div class="color-overlay"></div>
-        <video autoplay loop muted>
-            <source src="https://shantuiuzb.com/frontend/assets/img/clip.mp4">
-        </video>
-    </div>
+<div class="p_list mt-3">
+  <img src="https://dspipe.ru/upload/iblock/a92/a92f5d00c3d5076d5ba62c25d3f0c5fc.png" class="img-fluid" alt="">
+  <a class="primary-btn mt-4" href="#" data-text="Подробнее" data-toggle="modal" data-target="#exampleModal3">
+      <span>П</span>
+      <span>о</span>
+      <span>д</span>
+      <span>р</span>
+      <span>о</span>
+      <span>б</span>
+      <span>н</span>
+      <span>е</span>
+      <span>е</span>
+  </a>
+
 </div>
-    <div style="height:400px;width:100%">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod soluta natus. Magni tempora animi illo ea accusamus ex deserunt odio facere deleniti molestiae qui eaque in illum praesentium sunt iste accusantium nobis repellat aspernatur alias, architecto consectetur voluptate dolore! Saepe, enim rem nam dolorem tempore blanditiis perspiciatis repellat architecto.</p>
-    </div>
-
-
 </body>
 </html>
