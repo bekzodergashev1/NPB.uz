@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from .forms import ContactForm
 from requests import get
+import requests
 # Create your views here.
 
 def home(request):
